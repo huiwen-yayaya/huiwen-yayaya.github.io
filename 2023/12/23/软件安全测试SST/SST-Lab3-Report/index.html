@@ -82,18 +82,6 @@
 			</a>
 		  </li>
 		  
-		  <li>
-			<a href="/about" title="About me.">
-			  <i class=""></i>About
-			</a>
-		  </li>
-		  
-		  <li>
-			<a href="/atom.xml" title="Subscribe me.">
-			  <i class=""></i>RSS
-			</a>
-		  </li>
-		  
 		</ul>
       </div>
     </div> <!-- container -->
@@ -137,6 +125,7 @@
 <p><strong>3.1 shellcode.c</strong></p>
 <p>通过execve()系统调用执行一个shell程序</p>
 <p>不能编译c代码以及生成的二进制文件用于shellcode攻击，原因如下：</p>
+<span id="more"></span>
 <p>加载器问题：缓冲区溢出攻击中恶意代码不由操作系统加载，而是直接通过内存复制载入的，因此初始化步骤缺失导致无法运行这个shell程序</p>
 <p>代码中的0：字符串复制例如strcpy()遇到\0停止，发现这个c代码编译为二进制代码后至少会出现三处0：</p>
 <p>字符串“&#x2F;bin&#x2F;sh”末尾</p>
